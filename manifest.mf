@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: eu.cophi.api.index
+OpenIDE-Module-Localizing-Bundle: eu/cophi/api/index/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+
