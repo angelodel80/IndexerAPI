@@ -8,6 +8,7 @@ package eu.cophi.api.index;
 import eu.cophi.model.api.Document;
 import eu.cophi.modules.index.builtin.CophiIndexer;
 import java.io.File;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -34,8 +35,8 @@ final public class Indexer {
         impl.initialize(cophiDoc);
     }
     
-    public void index(){
-        impl.index();
+    public void index(Locale locale){
+        impl.index(locale);
     }
     
     public Index getTokenIdx(){
@@ -51,7 +52,7 @@ final public class Indexer {
     
     public interface Iindex{
         public void initialize(Document cophiDoc);
-        public void index();
+        public void index(Locale locale);
         public Index getIdx();
     }
 

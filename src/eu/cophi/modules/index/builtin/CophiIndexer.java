@@ -8,6 +8,7 @@ package eu.cophi.modules.index.builtin;
 
 import eu.cophi.api.index.Indexer;
 import eu.cophi.model.api.Document;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -26,9 +27,9 @@ public class CophiIndexer implements Indexer.Iindex {
     }
 
     @Override
-    public void index() {
+    public void index(Locale locale) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        idx.setIndex(IdxFunction.index(doc.getTokens()));
+        idx.setIndex(IdxFunction.index(doc.getTokens(),locale));
     }
 
     @Override

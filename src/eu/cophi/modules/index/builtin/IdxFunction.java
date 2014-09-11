@@ -5,6 +5,8 @@
  */
 package eu.cophi.modules.index.builtin;
 
+import java.text.Collator;
+import java.util.Locale;
 import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -14,10 +16,10 @@ import java.util.TreeMap;
  * @author Angelo Del Grosso
  */
 public class IdxFunction {
-
-    public static Map<String, Integer> index(String[] tokens) {
+    
+    public static Map<String, Integer> index(String[] tokens, Locale locale) {
         
-        Map<String, Integer> retMap = new TreeMap<String, Integer>();
+        Map<String, Integer> retMap = new TreeMap<String, Integer>(Collator.getInstance(locale));
         
         for (String token : tokens) {
             int frq = 0;
